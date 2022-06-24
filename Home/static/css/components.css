@@ -1,7 +1,7 @@
 /* nav */
 
 .nav {
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .nav__icon,
@@ -21,7 +21,7 @@
 }
 
 .nav__list .nav__link {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: 'Poppins';
     color: var(--black-2);
     padding: 0.5rem;
@@ -50,6 +50,9 @@
 .primary-btn {
     color: var(--white-1);
     background-color: var(--green-1);
+    height: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 @media only screen and(min-width:768px) {
