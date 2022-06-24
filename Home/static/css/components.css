@@ -1,0 +1,60 @@
+/* nav */
+
+.nav {
+    padding: 2rem 0;
+}
+
+.nav__icon,
+.nav__close,
+.nav__bgOverlay {
+    display: none;
+}
+
+.nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.nav__list .nav__link {
+    font-size: 1.2rem;
+    font-family: 'Poppins';
+    color: var(--black-2);
+    padding: 0.5rem;
+}
+
+.nav__list li:hover .nav__link {
+    color: var(--green-1);
+}
+
+
+/* global button */
+
+.btn {
+    color: var(--green-1);
+    font-family: 'Poppins';
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    padding: 1.2rem 1.2rem;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.primary-btn {
+    color: var(--white-1);
+    background-color: var(--green-1);
+}
+
+@media only screen and(min-width:768px) {
+    .btn {
+        padding: 1.3rem 2rem;
+        font-size: 2rem;
+    }
+}
