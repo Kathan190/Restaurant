@@ -57,6 +57,60 @@
     margin-top: 0.5rem;
 }
 
+@media only screen and (max-width:768px) {
+    .nav {
+        position: relative;
+    }
+    .nav__icon {
+        display: block;
+    }
+    .nav__icon svg,
+    .nav__close svg {
+        pointer-events: none;
+        height: 30px;
+        width: 30px;
+    }
+    .nav__close {
+        display: block;
+        position: absolute;
+        color: var(--black-1);
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+    }
+    .nav__list {
+        z-index: 1000;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        background-color: var(--lightGreen-1);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 2rem;
+        transform: translate(0%);
+        overflow: hidden;
+        transition: .3s ease-in transform;
+        -webkit-transform: translate(0%);
+        -moz-transform: translate(0%);
+        -ms-transform: translate(0%);
+        -o-transform: translate(0%);
+        -webkit-transition: .3s ease-in transform;
+        -moz-transition: .3s ease-in transform;
+        -ms-transition: .3s ease-in transform;
+        -o-transition: .3s ease-in transform;
+    }
+    .nav__list.show {
+        transform: translate(-100%);
+        -webkit-transform: translate(-100%);
+        -moz-transform: translate(-100%);
+        -ms-transform: translate(-100%);
+        -o-transform: translate(-100%);
+    }
+}
+
 @media only screen and(min-width:768px) {
     .btn {
         padding: 1.3rem 2rem;

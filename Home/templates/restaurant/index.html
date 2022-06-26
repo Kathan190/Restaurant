@@ -29,7 +29,7 @@
             </svg>
           </div>
           <div class="nav__bgOverlay"></div>
-          <ul class="nav__list">
+          <ul class="nav__list show">
             <div class="nav__close">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -54,5 +54,27 @@
   <!-- End Nav Section -->
         <!-- aos script -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            const navIconEl = document.querySelector('.nav__icon');
+            const navcloseEl = document.querySelector('.nav__close');
+            const navList = document.querySelector('.nav__list');
+            const overBgOverlayEl = document.querySelector('.nav__bgOverlay');
+
+            const navOpen = () => {
+                navList.classList.add('show');
+                navBgOverlayEl.classList.add('active');
+                document.body.style = 'visibility: visible; hight: 100vh; width:100vw; overflow: hidden;'
+            }
+
+            const navClose = () => {
+                navList.classList.remove('show');
+                navBgOverlayEl.classList.remove('active');
+                document.body.style = 'visiblity: visible; height: initial; width: 100%; overflow-x: hidden';
+            }
+
+            navIconEl.addEventListener('click', navopen);
+            navCloseEl.addEventListener('click', navClose);
+            navBgOverlayEl.addEventListener('click', navClose);
+        </script>
     </body>
 </html>
