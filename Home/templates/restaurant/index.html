@@ -39,6 +39,7 @@
   <body>
 
     <!-- ======= Header ======= -->
+    {% block content %}
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
   
@@ -66,7 +67,9 @@
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
   
       </div>
-    </header><!-- End Header -->
+    </header>
+    {% endblock %}
+    <!-- End Header -->
   
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero d-flex align-items-center section-bg">
