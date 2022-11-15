@@ -26,10 +26,100 @@
   
     <!-- Template Main CSS File -->
     <link href="static/assets/css/main.css" rel="stylesheet">
+
+
+  
+
+    <script>
+      function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+
+    </script>
+
+    <style>
+      
+    /* Dropdown button on hover & focus */
+    
+    
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      overflow:visible;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position:fixed;
+      left: 400px;
+      top: 200px;
+      width: 800px;
+      height: 500px;
+      opacity: 0.7;
+      border-radius: 20px;
+      
+      background-color: rgb(206, 18, 18, 0.8);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {display:block;}
+
+    </style>
   </head>
 
 
   <body>
+   <!-- ======= Pop-Up Login/Signup ======= -->
+    <div class="dropdown">
+      
+      <div id="myDropdown" class="dropdown-content">
+        <center><br><br><br><br><br>
+        <form action="static/forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
+  
+            
+              <input style="width: 300px; height: 50px;" type="text" name="username" class="form-control" id="username" placeholder="Username" required>
+            <br>
+              <input style="width: 300px; height: 50px;" type="text" name="password" class="form-control" id="password" placeholder="Password" required>
+           
+              <br>
+          
+          <div class="btn-book-a-table"><button style="width: 200px; height:50px" type="submit">Login</button></div>
+        
+        </form>
+      </center>
+      </div>
+    </div>
 
     <!-- ======= Header ======= -->
     {% block content %}
@@ -49,8 +139,8 @@
             <li><a href="#menu">Menu</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#login" id="button">Login</a></li>
-            <li><a href="#signup">Sign-up</a></li>
+            <li><a onclick="myFunction()" class="dropbtn">Login</a></li>
+            <li><a onclick="myFunction()" class="dropbtn">Signup</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav><!-- .navbar -->
@@ -60,6 +150,7 @@
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
   
       </div>
+      
     </header>
     {% endblock %}
     <!-- End Header -->
@@ -127,6 +218,9 @@
   
         </div>
       </section><!-- End About Section -->
+
+      
+      
   
       <!-- ======= Why Us Section ======= -->
       <section id="why-us" class="why-us section-bg">
