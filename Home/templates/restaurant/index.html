@@ -110,32 +110,7 @@ window.onclick = function(event) {
 
 
   <body>
-  <!-- Pop-up menu signup start -->
-  <div class="dropdown">
-      
-    <div id="myDropdown" class="dropdown-content">
-      <center><br><br><br><br><br>
-      <form action="static/forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
-
-            <input style="width: 300px; height: 50px;" type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required>
-          <br>
-            <input style="width: 300px; height: 50px;" type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" required>
-          <br>
-            <input style="width: 300px; height: 50px;" type="email" name="email" class="form-control" id="email" placeholder="Email" required> 
-          <br>
-            <input style="width: 300px; height: 50px;" type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-          <br>
-            <input style="width: 300px; height: 50px;" type="password" name="confirmpassword" class="form-control" id="confirmpassword" placeholder="Confirm-Password" requried>
-          <br> 
-        
-        <div class="btn-book-a-table"><button style="width: 200px; height:50px" type="submit" class="button">Login</button></div>
-      
-      </form>
-    </center>
-    </div>
-  </div>
-  <!-- Pop-Up Sign up menu end -->
-
+  
 
     <!-- ======= Header ======= -->
     {% block content %}
@@ -155,8 +130,6 @@ window.onclick = function(event) {
             <li><a href="#menu">Menu</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a onclick="myFunction()" class="dropbtn">Login</a></li>
-            <li><a onclick="myFunction()" class="dropbtn">Signup</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav><!-- .navbar -->
