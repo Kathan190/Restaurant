@@ -27,85 +27,6 @@
     <!-- Template Main CSS File -->
     <link href="static/assets/css/main.css" rel="stylesheet">
 
-
-  
-
-    <script>
-      function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-
-
-    </script>
-
-    <style>
-      
-    /* Dropdown button on hover & focus */
-    
-    
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-      overflow:visible;
-    }
-    
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-      display: none;
-      position:fixed;
-      left: 400px;
-      top: 200px;
-      width: 800px;
-      height: 500px;
-      opacity: 0.7;
-      border-radius: 20px;
-      
-      background-color: rgb(206, 18, 18, 0.8);
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-  
-    /* Links inside the dropdown */
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .button{
-      width: 70px;
-      height: 20px;
-      border-radius: 20px;
-      background-color: black;
-      color: white;
-      border-color: black;
-      
-    }
-    
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {background-color: #ddd;}
-    
-    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-    .show {display:block;}
-
-    </style>
   </head>
 
 
@@ -753,6 +674,10 @@ window.onclick = function(event) {
                 <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Book a Table</button></div>
+              <div class="alert">
+                <p>This is an alert message</p>
+                <button class="alert-close">Close</button>
+              </div>
             </form>
           </div><!-- End Reservation Form -->
 
